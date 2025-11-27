@@ -20,17 +20,12 @@ class DiceGame {
         delegate?.gameDidEnd()
     }
     
-    func updateScore() {
-        delegate?.gameDidUpdateScore(score: 100)
+    func updateScore(_ score: Int) {
+        delegate?.gameDidUpdateScore(score: score)
     }
 }
 
 class GameController: GameDelegate {
-    
-    init() {
-        let diceGame = DiceGame()
-        diceGame.delegate = self
-    }
     
     func gameDidStart() {
         print("Dice game has started")
@@ -48,3 +43,15 @@ class GameController: GameDelegate {
 }
 
 let diceGameController = GameController()
+let diceGame = DiceGame()
+diceGame.delegate = diceGameController
+diceGame.startGame()
+diceGame.endGame()
+diceGame.updateScore(100)
+
+/*
+ OUTPUT :-
+ Dice game has started
+ Dice game has ended
+ Dice game updated with score : 100
+ */
