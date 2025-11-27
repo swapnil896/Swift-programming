@@ -100,3 +100,15 @@ class TogglableClass: Togglable {
         
     }
 }
+
+// ===== Another way of conforming to protocols -> If a type already implements the required functions then you can just conform that type as below
+struct Switcher {
+    
+    var switchIsOn = true
+    
+    mutating func toggle() {
+        self.switchIsOn = false
+    }
+}
+
+extension Switcher: Togglable { }
