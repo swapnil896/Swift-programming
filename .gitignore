@@ -1,0 +1,50 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+*.moved-aside
+*.xccheckout
+*.xcworkspace/xcuserdata/
+project.xcworkspace/
+xcuserdata/
+
+# Swift Packages
+/.build/
+Packages/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+.swiftpm/xcode/xcuserdata/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Firebase / Crashlytics
+GoogleService-Info.plist
+
+# Bundler
+.bundle/
+
+# Other
+*.ipa
+*.xcarchive
